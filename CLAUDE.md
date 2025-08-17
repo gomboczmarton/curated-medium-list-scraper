@@ -8,7 +8,6 @@ This repository implements web scrapers to fetch Medium.com lists and extract th
 
 ## Communication Guidelines
 
-- Repository owner communicates in Hungarian
 - All code, documentation, and artifacts must be written in English
 - Comments, variable names, function names, and technical documentation in English only
 
@@ -69,7 +68,7 @@ python medium_scraper.py  # Start scraping
 - ✅ **Monitoring**: Colored console logs + detailed file logging
 
 ### 🎯 Target Performance
-- **URL**: `https://medium.com/@gomboczmarton/list/coding-de70d3863f9a`
+- **URL**: `https://medium.com/@username/list/your-list-id` (example: `https://medium.com/@gomboczmarton/list/coding-de70d3863f9a`)
 - **Expected**: 2600+ articles from coding list
 - **Time**: 6-8 hours for complete extraction
 - **Success Rate**: 95%+ with robust error handling

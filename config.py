@@ -17,7 +17,7 @@ class ScrapingConfig:
     """Main configuration class for the Medium scraper"""
     
     # Target URLs
-    DEFAULT_LIST_URL = "https://medium.com/@gomboczmarton/list/coding-de70d3863f9a"
+    DEFAULT_LIST_URL = os.getenv('MEDIUM_LIST_URL', 'https://medium.com/@username/list/your-list-id')
     
     # Output settings
     OUTPUT_DIR = "output"

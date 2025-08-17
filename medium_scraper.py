@@ -5,8 +5,8 @@ Medium List Scraper using Playwright
 A comprehensive scraper for extracting articles from Medium lists with infinite scroll support.
 Designed for ethical scraping with rate limiting, error handling, and progressive data saving.
 
-Target: https://medium.com/@gomboczmarton/list/coding-de70d3863f9a
-Goal: Extract all 2600+ articles from the coding list
+Target: Configurable Medium list URL via environment variable
+Goal: Extract all articles from the specified Medium list
 """
 
 import asyncio
@@ -776,7 +776,7 @@ async def main():
     """Main execution function"""
     
     # Configuration
-    LIST_URL = "https://medium.com/@gomboczmarton/list/coding-de70d3863f9a"
+    LIST_URL = os.getenv('MEDIUM_LIST_URL', 'https://medium.com/@username/list/your-list-id')
     
     # Initialize scraper with ethical settings
     scraper = MediumScraper(

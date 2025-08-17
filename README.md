@@ -36,7 +36,9 @@ HEADLESS=false python medium_scraper.py
 
 ## 🎯 Project Overview
 
-**Target**: Extract 2600+ articles from Medium coding list: `https://medium.com/@gomboczmarton/list/coding-de70d3863f9a`
+**Target**: Extract articles from Medium list (configurable via environment variable)
+
+**Example**: `https://medium.com/@gomboczmarton/list/coding-de70d3863f9a` (2600+ articles)
 
 **Challenge**: Medium lacks official API access and uses infinite scroll with dynamic content loading
 
@@ -72,7 +74,7 @@ async def custom_scrape():
         save_interval=25  # Save more frequently
     )
     articles = await scraper.scrape_list(
-        'https://medium.com/@gomboczmarton/list/coding-de70d3863f9a'
+        'https://medium.com/@username/list/your-list-id'
     )
     print(f'Extracted {len(articles)} articles')
 
@@ -177,7 +179,7 @@ from medium_scraper import MediumScraper
 async def scrape_medium_list():
     scraper = MediumScraper()
     articles = await scraper.scrape_list(
-        "https://medium.com/@gomboczmarton/list/coding-de70d3863f9a"
+        "https://medium.com/@username/list/your-list-id"
     )
     print(f"Extracted {len(articles)} articles")
 
@@ -327,5 +329,3 @@ For issues, questions, or contributions:
 3. Include log files for debugging help
 
 ---
-
-**Disclaimer**: Repository owner communicates in Hungarian, but all code and documentation are maintained in English.
